@@ -37,11 +37,17 @@ fun main(args: Array<String>) {
     println(reme)
 
     //    8.- Inicializa un objeto de Empleado llamado ivan con los 4 datos, comprueba que sea correcto
-    val ivan = Empleado("Ivan","Paseo de la Castellana", "Jubilado", 2000.0F)
+    val ivan = Empleado("Ivan", "Paseo de la Castellana", "Jubilado", 2000.0F)
     println(ivan)
 
     //    11.- Dar de alta un objeto de la clase Jefe, inicializando sus valores
-    val bruno = Jefe("Bruno José Alzaga de Vega", "Paseo Zorrilla 10", "Programador en Jefe (todos firmes kopòn!!!)",115000.0F, "Desarrollo de Sotfware")
+    val bruno = Jefe(
+        "Bruno José Alzaga de Vega",
+        "Paseo Zorrilla 10",
+        "Programador en Jefe (todos firmes kopòn!!!)",
+        115000.0F,
+        "Desarrollo de Sotfware"
+    )
     println(bruno)
 
     //    3.- Inicializa un objeto de la clase Persona llamado Paco
@@ -52,20 +58,34 @@ fun main(args: Array<String>) {
     println(reme2)
 
     //    8.- Inicializa un objeto de Empleado llamado ivan con los 4 datos, comprueba que sea correcto
-    val ivan2 = Empleado2("Ivan2","Paseo de la Castellana, 2", "Jubilado2", 2222.22F)
+    val ivan2 = Empleado2("Ivan2", "Paseo de la Castellana, 2", "Jubilado2", 2222.22F)
     println(ivan2)
 
     //    11.- Dar de alta un objeto de la clase Jefe, inicializando sus valores
-    val bruno2 = Jefe2("Bruno José Alzaga de Vega2", "Paseo Zorrilla 2, 2º B", "Programador de 2ª en Jefe (todos firmes kopòn!!!)",22222.22F, "Desarrollo de Sotfware de segundas partes")
+    val bruno2 = Jefe2(
+        "Bruno José Alzaga de Vega2",
+        "Paseo Zorrilla 2, 2º B",
+        "Programador de 2ª en Jefe (todos firmes kopòn!!!)",
+        22222.22F,
+        "Desarrollo de Sotfware de segundas partes"
+    )
     println(bruno2)
 
 // Luego, crea dos clases llamadas Libro y Revista que implementen esta interfaz.
 // El método imprimir() debe imprimir un mensaje que indique si el objeto es un libro o una revista.
-    val libro=Libro()
+    val libro = Libro()
     libro.imprimir()
 
-    val revista=Revista()
+    val revista = Revista()
     revista.imprimir()
+
+    //Ejercicio 3: Múltiples interfaces
+    //Crea dos interfaces llamadas Volador y Nadador con un método volar() y nadar(), respectivamente.
+    // Luego, crea una clase llamada AveMarina que implemente ambas interfaces y proporcione
+    // implementaciones para los métodos.
+    val especie= AveMarina()
+    especie.volar()
+    especie.nadar()
 
 
 }

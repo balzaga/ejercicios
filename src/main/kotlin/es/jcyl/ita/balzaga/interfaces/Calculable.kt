@@ -7,9 +7,9 @@ package es.jcyl.ita.balzaga.interfaces
 // Luego, crea una clase llamada Circulo que implemente esta interfaz y proporcione implementaciones
 // para los métodos abstractos.
 
-public interface Calculable {
+interface Calculable {
+    fun calcularArea():Double
 
-    fun calcularArea() //:Double
+    fun calcularPerimetro():Double
 
-    fun calcularPerimetro()// :Double
 }
