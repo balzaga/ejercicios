@@ -37,4 +37,8 @@ fun main(args: Array<String>) {
 //6.- Modifica el cuarto valor e imprimelo por pantalla
     arrayI[3] = 4
     println("el array tiene en la posicion 4 el valor ${arrayI[3]}")
+
+
+
+
 }
