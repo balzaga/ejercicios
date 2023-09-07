@@ -93,7 +93,7 @@ fun deleteTable(conn: Connection?){
 }
 
 fun getAllUsers(connection: Connection?): MutableList<User> {
-    val sql = "SELECT * FROM usuario;"
+    val sql = "SELECT * FROM usuario"
     val statement = connection?.createStatement()
     val users = mutableListOf<User>()
     try {
@@ -128,7 +128,7 @@ fun insertUser(connection: Connection?){
     val email = "ejemplo@example.com"
 
     // Query SQL para insertar un nuevo registro en la tabla "usuario"
-    val insertQuery = "INSERT INTO usuario (name, email) VALUES (?, ?)"
+    val insertQuery = "INSERT INTO usuario (id, name, email) VALUES (nextval('user_id_sequence'), ?, ?)"
 
     try {
         // Prepara la sentencia SQL
@@ -262,9 +262,9 @@ fun main() {
         // handle any errors
         ex.printStackTrace()
     }
-    showDatabases(conn)
-    showTables(conn)
-    createTable(conn)
+    //showDatabases(conn)
+    //showTables(conn)
+    //createTable(conn)
     //deleteTable(conn)
 
     var users: MutableList<User> = getAllUsers(conn)
