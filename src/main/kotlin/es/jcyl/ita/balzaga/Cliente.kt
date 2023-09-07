@@ -47,6 +47,12 @@ class Cliente {
             field = value
         }
 
+    var totalFacturacion:Double = 0.0
+            get() = field
+    set(value) {
+        field = value
+    }
+
     //    8.- Modifica el constructor de la clase Cliente para que se le puedan pasar los
     //    parámetros todos los datos que pueda almacenar la clase, de manera opcional
     constructor(
@@ -61,6 +67,21 @@ class Cliente {
         this.email = email
         this.cotizacion = cotizacion
         this.totalCotizaciones += cotizacion
+    }
+    constructor(
+        nombre: String = "",
+        direccion: String = "",
+        tlf: String = "",
+        email: String = "",
+        cotizacion: Double = 0.0,
+        totalFacturacion: Double = 0.0) {
+        this.nombre = nombre
+        this.direccion = direccion
+        this.tlf = tlf
+        this.email = email
+        this.cotizacion = cotizacion
+        this.totalCotizaciones += cotizacion
+        this.totalFacturacion= totalFacturacion
     }
 
 
@@ -110,6 +131,7 @@ class Cliente {
                         email : ${this.email}
                         cotización : ${this.cotizacion}
                         total cotizacionesn : ${this.totalCotizaciones}
+                        total facturación : ${this.totalFacturacion}
                     ]
                 """.trimIndent()
         }
