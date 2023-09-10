@@ -1,14 +1,9 @@
-package es.jcyl.ita.balzaga.mysql
+package es.jcyl.ita.balzaga.mySQL
 
+import es.jcyl.ita.balzaga.User
 import java.sql.*
 import java.util.*
 
-data class User(
-    var id: Long = 0L,
-    var name: String = "",
-    var email: String = ""){
-
-}
 
 fun showDatabases(conn: Connection?){
     var stmt: Statement? = null
@@ -276,17 +271,17 @@ fun main() {
     //createTable(conn)
     //deleteTable(conn)
 
-    var users: MutableList<User> = getAllUsers(conn)
+    var users: MutableList<User> = es.jcyl.ita.balzaga.postgreSQL.getAllUsers(conn)
     println(users)
-    insertUser(conn)
-    users = getAllUsers(conn)
+    es.jcyl.ita.balzaga.postgreSQL.insertUser(conn)
+    users = es.jcyl.ita.balzaga.postgreSQL.getAllUsers(conn)
     println(users)
     val id: Long = users.get(0).id
     println("id: $id")
-    updateUser(conn, id)
-    var user = getUserById(conn, id)
+    es.jcyl.ita.balzaga.postgreSQL.updateUser(conn, id)
+    var user = es.jcyl.ita.balzaga.postgreSQL.getUserById(conn, id)
     println(user)
-    deleteUserById(conn, id)
+    es.jcyl.ita.balzaga.postgreSQL.deleteUserById(conn, id)
     conn?.close()
 }
 
